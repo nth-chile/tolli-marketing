@@ -1,0 +1,252 @@
+$tan: #F7F3E7;
+$black: #131114;
+$EBGaramond: 'EB Garamond', serif;
+$Quicksand: 'Quicksand', sans-serif;
+
+
+// BASE
+html {
+  background-color: $tan;
+}
+body {
+  font-family: $EBGaramond;
+  font-size: 17px;
+  text-align: center;
+  min-width: 1024px;
+}
+button {
+  background-color: $black;
+  font-family: $Quicksand;
+  color: white;
+  text-transform: uppercase;
+}
+input {
+  font-size: 17px;
+}
+label {
+  text-transform: uppercase;
+  font-family: $Quicksand;
+}
+label, h5, button {
+  letter-spacing: 1px;
+  font-size: .7em;
+}
+h2 {
+  font-family: $EBGaramond;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+}
+p {
+  line-height: 1.4;
+  margin: .5em;
+}
+
+// COMPONENTS
+.input-with-button {
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 40px;
+  margin: .6em auto;
+  width: 276px;
+  padding: 3.5px 3.5px 3.5px 20px;
+  button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px 13px;
+    font-size: 12px;
+    &:focus { outline: none; }
+  }
+  input {
+    border: none;
+    width: 188px;
+    margin-top: 4px;
+    opacity: .8;
+    &:focus { outline: none; }
+  }
+}
+// .bg-block {
+//   background: url(../assets/img/bg@2x.jpg) no-repeat;
+//   background-size: cover;
+//   height: 200px;
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+// }
+footer {
+  padding: 50px 0 100px;
+  a {
+  	opacity: 0.4;
+  	font-size: 12px;
+  	font-weight: 500;
+    font-family: $Quicksand;
+  	line-height: 1.17;
+  	letter-spacing: 1.4px;
+  	color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+}
+.logo {
+  background: url(../assets/img/logo.svg) no-repeat;
+  background-size: contain;
+  margin: 32px auto 23px;
+  height: 74px;
+  width: 90px;
+}
+.hero__wrap {
+  position: relative;
+  z-index: 100;
+  margin: 0 auto;
+  height: 51vw;
+  width: 88%;
+  min-width: 900px;
+  min-height: 522px;
+}
+.icon-fb {
+  background: url(../assets/img/icon-facebook.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 19.8px;
+  width: 19.8px;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+.icon-twitter {
+  background: url(../assets/img/icon-twitter.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 22.2px;
+  height: 17.3px;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+.icon-insta {
+  background: url(../assets/img/icon-instagram.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+.icons__wrap {
+  margin: 56px 0 32px 0;
+}
+.join__wrap {
+  position: absolute;
+  left: 50%;
+  top: 11em;
+  transform: translateX(-50%);
+  form {
+    margin-top: 1.5em;
+  }
+  p {
+    max-width: 25em;
+  }
+}
+.play-button {
+  background: url(../assets/img/play.svg) no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 37px;
+  padding-left: 3em;
+  height: 36px;
+  width: 160px;
+  position: absolute;
+  left: 8em;
+  bottom: 3em;
+  &:focus {
+    outline: none;
+  }
+}
+.video {
+  background: url(../assets/img/bg-image@2x.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 60px auto; /* 15% from the top and centered */
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal--type-video {
+  .modal-content {
+    background-color: transparent;
+    border: none;
+    display: none;
+    // min-height: 163px;
+    // min-width: 290px;
+    min-height: 180px;
+    min-width: 320px;
+    padding: 0;
+    //height: 33.7vw;
+    height: 50.55vw;
+    //width: 60vw;
+    width: 90vw;
+  }
+  .player {
+    background-color: black;
+    transform: translateY(43px);
+  }
+  iframe {
+    transform: translateY(-43px);
+  }
+  iframe, .player {
+    // min-height: 163px;
+    // min-width: 290px;
+    min-height: 180px;
+    min-width: 320px;
+    //height: 33.7vw;
+    height: 50.55vw;
+    //width: 60vw;
+    width: 90vw;
+  }
+}
+
+
+// HELPERS
+.bold {
+  font-weight: 1px;
+}
+.italic {
+  font-style: italic;
+}
+.white {
+  color: white;
+}
